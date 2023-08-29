@@ -1,0 +1,59 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .Calculator {
+    width: 278px;
+    // min-height: 500px;
+    color: white;
+    .icon{
+      cursor: pointer;
+    }
+    &__mode {
+      height: 50px;
+      display: flex;
+      align-items: safe;
+      justify-content: space-between;
+      .icon{
+        border: 1px solid;
+        border-radius: 50%;
+      }
+    }
+    &__result {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 10px;
+      font-weight: 700;
+      span{
+        font-size: 15px;
+        padding-left: 1px;
+        animation: del 0.7s ease infinite;
+      }
+      @keyframes del {
+        0%{
+          opacity: 0;
+        }
+        50%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 0;
+        }
+      }
+    }
+    .Keys {
+      height: 55px;
+      width: 55px;
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    
+    }
+  }
+}
