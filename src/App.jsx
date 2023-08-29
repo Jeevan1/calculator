@@ -57,7 +57,7 @@ function App() {
         style={{ backgroundColor: mode ? "black" : "white" }}
       >
         <div
-          className="Calculator rounded-3 p-3"
+          className="Calculator shadow rounded-3 p-3"
           style={{
             border: `1px solid ${!mode ? "white" : "black"}`,
             backgroundColor: mode ? "white" : "black",
@@ -85,11 +85,11 @@ function App() {
               <LuDelete className="icon" onClick={() => deleteNum(input)} />
             )}
           </div>
-          <div className="Calculator__keys py-3 mt-5 d-flex gap-2 flex-wrap">
+          <div className="Calculator__keys py-3 mt-5">
             {buttons.map((button, index) => (
               <button
                 key={index}
-                className={`Keys d-flex align-items-center justify-content-center  rounded-3'`}
+                className='Keys d-flex align-items-center justify-content-center  rounded'
                 onClick={() => handleButtonClick(button.value)}
                 style={{ backgroundColor: button.bg }}
               >

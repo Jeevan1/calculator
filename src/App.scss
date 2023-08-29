@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   .Calculator {
-    width: 278px;
+    width: 300px;
     // min-height: 500px;
     color: white;
     .icon{
@@ -29,6 +29,7 @@
       justify-content: end;
       gap: 10px;
       font-weight: 700;
+      overflow: hidden;
       span{
         font-size: 15px;
         padding-left: 1px;
@@ -46,14 +47,19 @@
         }
       }
     }
-    .Keys {
-      height: 55px;
-      width: 55px;
+    &__keys {
       font-size: 20px;
       color: white;
       font-weight: 600;
       cursor: pointer;
-    
+      display: grid;
+      row-gap: 10px;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(66px, 1fr));
+      button{
+        border: 3px solid rgb(69, 57, 40);
+        
+      }
     }
   }
 }
